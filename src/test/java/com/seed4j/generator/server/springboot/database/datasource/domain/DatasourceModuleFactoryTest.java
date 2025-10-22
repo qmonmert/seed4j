@@ -148,7 +148,7 @@ class DatasourceModuleFactoryTest {
             hikari:
               maximum-pool-size: 2
             password: ''
-            url: jdbc:tc:mariadb:0.0.0:///myapp
+            url: jdbc:tc:mariadb:0.0.0:///myapp?TC_TMPFS=/testtmpfs:rw
             username: myapp
         """
       );
@@ -215,7 +215,7 @@ class DatasourceModuleFactoryTest {
             hikari:
               maximum-pool-size: 2
             password: ''
-            url: jdbc:tc:mysql:0.0.0:///myapp
+            url: jdbc:tc:mysql:0.0.0:///myapp?TC_TMPFS=/testtmpfs:rw
             username: myapp
         """
       );

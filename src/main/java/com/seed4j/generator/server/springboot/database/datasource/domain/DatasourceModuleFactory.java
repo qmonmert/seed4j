@@ -236,7 +236,7 @@ public class DatasourceModuleFactory {
         .springTestProperties()
           .set(
             propertyKey(SPRING_DATASOURCE_URL),
-            propertyValue("jdbc:tc:" + dockerImage.fullName() + ":///" + moduleProperties.projectBaseName().name())
+            propertyValue("jdbc:tc:" + dockerImage.fullName() + ":///" + moduleProperties.projectBaseName().name() + "?TC_TMPFS=/testtmpfs:rw")
           )
           .set(propertyKey(SPRING_DATASOURCE_USERNAME), propertyValue(moduleProperties.projectBaseName().name()))
           .set(propertyKey(SPRING_DATASOURCE_PASSWORD), propertyValue(""))
